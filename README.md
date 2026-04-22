@@ -1,4 +1,4 @@
-<img width="2872" height="1574" alt="image" src="https://github.com/user-attachments/assets/b6d9f658-48ba-4409-9135-8a43a3d1deb5" /># researchpaper
+researchpaper
 From Mindful Living to Algorithmic Dependence: Psychological Consequences of AI-Driven Health and Wellness Applications 
 [![DOI](https://img.shields.io/badge/DOI-10.13140%2FRG.2.2.36461.96489-blue)](https://doi.org/10.13140/RG.2.2.36461.96489)
 
