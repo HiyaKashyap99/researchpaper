@@ -1,6 +1,10 @@
 From Mindful Living to Algorithmic Dependence: Psychological Consequences of AI-Driven Health and Wellness Applications 
 [![DOI](https://img.shields.io/badge/DOI-10.13140%2FRG.2.2.36461.96489-blue)](https://doi.org/10.13140/RG.2.2.36461.96489)
 
+## 🔗 Official Publication
+The preprint version of this paper is officially registered and hosted on **ResearchGate**.  
+**Direct Link:** [View on ResearchGate](https://doi.org/10.13140/RG.2.2.36461.96489)
+
 <img width="2872" height="1574" alt="image" src="https://github.com/user-attachments/assets/e9466f62-6518-4f45-8838-8f5f4a02aa2d" />
 
 ## 📝 Overview
@@ -14,10 +18,6 @@ We seldom pay attention to the moment when a useful tool turns into something we
 * ## 📂 Project Structure
 * **`researchpaper`**: Contains the final research paper PDF (Preprint).
 * **`README.md`**: Project documentation, DOI registration, and publication details.
-
-## 🔗 Official Publication
-The preprint version of this paper is officially registered and hosted on **ResearchGate**.  
-**Direct Link:** [View on ResearchGate](https://doi.org/10.13140/RG.2.2.36461.96489)
 
 ## 🎓 Acknowledgements
 We would like to convey our sincere appreciation to Chitkara University for giving us the chance to develop ourselves through their noble guidance. Our special thanks are extended to our mentor, Dr. Rajat Takkar, without whose constant guidance, valuable suggestions, and insightful ideas we would not have been able to prepare this research paper.
