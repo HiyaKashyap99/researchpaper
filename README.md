@@ -5,16 +5,12 @@
 The preprint version of this paper is officially registered and hosted on **ResearchGate**.  
 **Direct Link:** [View on ResearchGate](https://doi.org/10.13140/RG.2.2.36461.96489)
 
-<img width="2872" height="1574" alt="image" src="https://github.com/user-attachments/assets/e9466f62-6518-4f45-8838-8f5f4a02aa2d" />
-
 ## 🔗AI Dependency Assesment - https://assesment-researchpaper.netlify.app
-
 
 ## 👥 Authors
 * **Shivi - 2210992333** - (Chitkara University)
 * **Hiya Kashyap - 2210990415** - (Chitkara University)
 * **Under the Guidance of Mentor:** **Rajat Takkar**
-
 
 ## 📝 Overview
 We seldom pay attention to the moment when a useful tool turns into something we simply cannot do without. Today, artificial intelligence is not only there to help us but also mediates our sleep, eating, movement, emotions, and communication. Rings and watches track our steps before we even lace up our shoes; calorie apps turn lunch into a number that has moral significance; chatbots receive the kind of unfiltered, honest confessions that we used to share only with close friends. What we lose in the bargain is harder to define but easier to feel in the quiet competence of sensing our own hunger, finding our way down an unfamiliar street, or sitting with an emotion long enough to understand it. These small frictions are not inefficiencies to be optimized away but are how human capability increases. Clinical evidence is finally beginning to validate what many of us feel is true. Orthosomnia, a sleep disorder that has its roots in the obsessive fear of the tracker itself, finally has a name. Calorie apps turn up in the medical histories of a disturbing number of eating disorder patients. The loss of interoceptive awareness, the reduced ability to sense one’s own internal bodily states, is beginning to be identified as a quantifiable effect of outsourcing self-awareness to technology. The questions that this paper will explore are: at what point does self-quantification cease to be for the benefit of the individual and begin to control them; how does the substitution of human emotional support with AI companions begin to undermine empathy, nonverbal cues, and the ability to handle actual conflict in a way that quietly undermines empathy, nonverbal intelligence, and conflict resolution skills; and which of the cognitive functions of memory, attention, spatial reasoning, critical thinking, creativity, and social cognition are we ceding to algorithms without understanding the price tag. Using a systematic review of the peer-reviewed literature from 2015 to 2025, case synthesis, and theoretical frameworks ranging from Self-Determination Theory to neuroplasticity and distributed cognition, the results indicate that the answer to all three questions is the same: the damage becomes real the moment we stop trusting ourselves more than our screens.
