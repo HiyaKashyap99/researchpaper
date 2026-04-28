@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algorithmic Dependence — Self-Assessment</title>
+<meta name="description" content="A 20-question reflective self-assessment based on the research paper 'From Mindful Living to Algorithmic Dependence' by Hiya Kashyap and Shivi, Chitkara University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   Algorithmic Dependence Self-Assessment
+   Design: editorial, contemplative, warm-neutral palette
+   ============================================================ */
+
+:root {
+  --bg:           #F4EFE6;
+  --surface:      #FAF7F1;
+  --surface-alt:  #EDE6D8;
+  --ink:          #1F1B16;
+  --ink-soft:     #3C342B;
+  --muted:        #756A5C;
+  --line:         #D4CCBE;
+  --accent:       #B85042;
+  --accent-deep:  #8E3A2E;
+  --accent-soft:  #E5C9C2;
+  --sage:         #7A8471;
+  --warning:      #C8862C;
+  --serif:        'Fraunces', Georgia, serif;
+  --sans:         'Manrope', system-ui, sans-serif;
+  --r-sm: 6px; --r-md: 12px; --r-lg: 20px;
+  --shadow-soft: 0 1px 3px rgba(31,27,22,0.04), 0 4px 16px rgba(31,27,22,0.06);
+  --shadow-lift: 0 2px 6px rgba(31,27,22,0.06), 0 12px 32px rgba(31,27,22,0.10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  font-size: 16px;
+  min-height: 100vh;
+  /* subtle paper-grain texture */
+  background-image:
+    radial-gradient(rgba(31,27,22,0.018) 1px, transparent 1px),
+    radial-gradient(rgba(31,27,22,0.012) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 1px;
+}
+
+/* ---- Layout --------------------------------------------------- */
+.frame {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 540px) {
+  .frame { padding: 32px 20px 64px; }
+}
+
+/* ---- Top masthead -------------------------------------------- */
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 56px;
+  font-family: var(--sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.masthead .mark {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+.masthead .meta { font-size: 10px; }
+
+/* ---- Screens ------------------------------------------------- */
+.screen { display: none; animation: fadeIn 0.5s ease; }
+.screen.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   WELCOME SCREEN
+   ============================================================ */
+.welcome .eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.welcome h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 18px;
+  font-variation-settings: "opsz" 144;
+}
+
+.welcome h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent-deep);
+}
+
+.welcome .lede {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(18px, 2.4vw, 22px);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-bottom: 36px;
+  max-width: 540px;
+}
+
+.welcome .body-text p {
+  margin-bottom: 16px;
+  color: var(--ink-soft);
+}
+
+.byline {
+  margin: 40px 0;
+  padding: 24px;
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+}
+
+.byline .label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.byline .authors {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.byline .affiliation {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.disclaimer {
+  margin: 32px 0;
+  padding: 16px 20px;
+  background: rgba(200,134,44,0.06);
+  border: 1px solid rgba(200,134,44,0.18);
+  border-radius: var(--r-md);
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.disclaimer strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--warning);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ---- Buttons ------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--bg);
+}
+.btn-primary:hover {
+  background: var(--accent-deep);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lift);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+.btn-ghost:hover {
+  background: var(--surface);
+  border-color: var(--ink);
+}
+
+.btn .arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* ============================================================
+   QUESTION SCREEN
+   ============================================================ */
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 28px;
+}
+
+.section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.q-counter {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.q-counter .current {
+  font-weight: 600;
+  color: var(--ink);
+  font-style: normal;
+}
+
+.progress-track {
+  height: 2px;
+  background: var(--line);
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 100px;
+}
+
+.question-text {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(24px, 3.5vw, 32px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 36px;
+  font-variation-settings: "opsz" 72;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink-soft);
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.option:hover {
+  border-color: var(--ink);
+  background: var(--surface-alt);
+  transform: translateX(2px);
+}
+
+.option.selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.option .key {
+  flex: 0 0 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.option:hover .key {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.option.selected .key {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.option .text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.q-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.q-nav .back {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+.q-nav .back:hover { color: var(--ink); }
+.q-nav .back:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   RESULTS SCREEN
+   ============================================================ */
+.results .eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.score-block {
+  text-align: center;
+  margin: 32px 0 56px;
+  padding: 48px 24px;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.score-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at top left, rgba(184,80,66,0.08), transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(122,132,113,0.06), transparent 50%);
+  pointer-events: none;
+}
+
+.score-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.score-number {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(72px, 14vw, 120px);
+  line-height: 0.9;
+  color: var(--ink);
+  font-variation-settings: "opsz" 144;
+  position: relative;
+}
+.score-number .max {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.4em;
+  margin-left: 8px;
+}
+
+.score-band {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 6px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  position: relative;
+}
+
+.band-low      { background: rgba(122,132,113,0.18); color: var(--sage); }
+.band-moderate { background: rgba(200,134,44,0.18); color: var(--warning); }
+.band-high     { background: rgba(184,80,66,0.18); color: var(--accent); }
+.band-veryhigh { background: rgba(142,58,46,0.20); color: var(--accent-deep); }
+
+/* Domain breakdown */
+.domain-section {
+  margin-bottom: 48px;
+}
+
+.section-heading {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 72;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 8px;
+}
+
+.domain-row {
+  margin-bottom: 24px;
+}
+
+.domain-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.domain-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.domain-name .level {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.domain-score {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.domain-bar {
+  height: 6px;
+  background: var(--line);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.domain-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0;
+}
+.fill-low { background: var(--sage); }
+.fill-moderate { background: var(--warning); }
+.fill-high { background: var(--accent); }
+.fill-veryhigh { background: var(--accent-deep); }
+
+/* Interpretation block */
+.interpretation {
+  margin-bottom: 48px;
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.interpretation p { margin-bottom: 16px; }
+.interpretation .first-letter::first-letter {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 3em;
+  float: left;
+  line-height: 0.9;
+  margin: 6px 12px 0 0;
+  color: var(--accent);
+}
+
+/* Recommendations */
+.reco-list {
+  list-style: none;
+  margin-bottom: 48px;
+}
+
+.reco-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 16px;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+.reco-list li:last-child { border-bottom: none; }
+
+.reco-list .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent);
+  font-size: 18px;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+/* Citation */
+.citation {
+  margin-top: 64px;
+  padding: 32px;
+  background: var(--surface);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--ink);
+}
+
+.citation .label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.citation .text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* Action bar */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* ---- Footer -------------------------------------------------- */
+.footer {
+  margin-top: auto;
+  padding-top: 48px;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.footer .ornament {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--line);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 24px 0 16px;
+  display: block;
+}
+
+/* ---- Print --------------------------------------------------- */
+@media print {
+  body { background: white; }
+  .actions, .q-nav, .progress-track { display: none; }
+  .screen { display: block !important; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="frame">
+
+  <header class="masthead">
+    <div class="mark">Algorithmic Dependence</div>
+    <div class="meta">A Self-Assessment</div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         SCREEN 1: WELCOME
+         ============================================================ -->
+    <section class="screen welcome active" id="screen-welcome">
+
+      <div class="eyebrow">Companion Tool · 2025</div>
+
+      <h1>Are you using your devices, <em>or are they using you?</em></h1>
+
+      <p class="lede">A 20-question reflective assessment based on the empirical thresholds of harm identified in the research paper "From Mindful Living to Algorithmic Dependence."</p>
+
+      <div class="body-text">
+        <p>This self-assessment translates the diagnostic criteria from the research paper into a short, structured set of questions across three domains: self-tracking behaviour, AI-companion reliance, and cognitive offloading.</p>
+        <p>It takes about four minutes. Your answers are processed only in your own browser — nothing is uploaded, nothing is stored, nothing is shared.</p>
+      </div>
+
+      <div class="byline">
+        <div class="label">Based on the research of</div>
+        <div class="authors">Hiya Kashyap &amp; Shivi</div>
+        <div class="affiliation">Department of Computer Science and Engineering · Chitkara University, Punjab</div>
+        <div class="affiliation" style="margin-top: 6px; font-style: italic;">Supervised by Dr. Rajat Takkar</div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>A Note Before You Begin</strong>
+        This tool is designed to support reflection and self-awareness. It is not a clinical diagnostic instrument. If your answers raise concerns, consider consulting a qualified mental-health professional.
+      </div>
+
+      <button class="btn btn-primary" onclick="startAssessment()">
+        Begin the Assessment
+        <span class="arrow">→</span>
+      </button>
+
+    </section>
+
+    <!-- ============================================================
+         SCREEN 2: QUESTIONS
+         ============================================================ -->
+    <section class="screen" id="screen-question">
+
+      <div class="question-header">
+        <div class="section-label" id="section-label">Self-Tracking</div>
+        <div class="q-counter">Question <span class="current" id="q-current">1</span> of 20</div>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width: 5%;"></div>
+      </div>
+
+      <h2 class="question-text" id="question-text">Question goes here</h2>
+
+      <div class="options" id="options-container">
+        <!-- populated by JS -->
+      </div>
+
+      <div class="q-nav">
+        <button class="back" id="back-btn" onclick="goBack()">← Previous</button>
+        <span style="font-size: 12px; color: var(--muted); font-style: italic; font-family: var(--serif);">Tap an answer to continue</span>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         SCREEN 3: RESULTS
+         ============================================================ -->
+    <section class="screen results" id="screen-results">
+
+      <div class="eyebrow">Your Results</div>
+
+      <h1 style="font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 5vw, 44px); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; font-variation-settings: 'opsz' 144;">A reflection on <em style="color: var(--accent-deep); font-weight: 400;">your relationship with technology.</em></h1>
+
+      <div class="score-block">
+        <div class="score-label">Overall Dependence Score</div>
+        <div class="score-number">
+          <span id="total-score">0</span><span class="max">/ 60</span>
+        </div>
+        <div class="score-band" id="score-band-pill">Calculating...</div>
+      </div>
+
+      <div class="domain-section">
+        <h3 class="section-heading">Where you stand, by domain</h3>
+        <div id="domain-breakdown">
+          <!-- populated by JS -->
+        </div>
+      </div>
+
+      <div class="domain-section">
+        <h3 class="section-heading">What this means</h3>
+        <div class="interpretation" id="interpretation">
+          <!-- populated by JS -->
+        </div>
+      </div>
+
+      <div class="domain-section">
+        <h3 class="section-heading">A few practical suggestions</h3>
+        <ol class="reco-list" id="recommendations">
+          <!-- populated by JS -->
+        </ol>
+      </div>
+
+      <div class="citation">
+        <div class="label">Source Research</div>
+        <div class="text">Kashyap, H., &amp; Shivi. (2025). <em>From Mindful Living to Algorithmic Dependence: Psychological Consequences of AI-Driven Health and Wellness Applications.</em> Department of Computer Science and Engineering, Chitkara University, Punjab, India. Supervised by Dr. Rajat Takkar.</div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" onclick="restartAssessment()">
+          Take it Again
+          <span class="arrow">↻</span>
+        </button>
+        <button class="btn btn-ghost" onclick="window.print()">
+          Print Results
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span class="ornament">·  ·  ·</span>
+    Chitkara University · CO-OP Module-2 (22CS421) · 2025-2026
+  </footer>
+
+</div>
+
+<script>
+/* ============================================================
+   Algorithmic Dependence Self-Assessment
+   Question bank, scoring, and screen management
+   ============================================================ */
+
+const QUESTIONS = [
+  /* ---------------- DOMAIN 1: SELF-TRACKING (7 questions) -------- */
+  {
+    domain: 'tracker',
+    section: 'Self-Tracking',
+    text: 'How many times per day do you check your fitness or health-tracking application?',
+    options: [
+      { text: 'Less than three times',                 score: 0 },
+      { text: 'Between three and five times',          score: 1 },
+      { text: 'Between six and ten times',             score: 2 },
+      { text: 'More than ten times',                   score: 3 }
+    ]
+  },
+  {
+    domain: 'tracker',
+    section: 'Self-Tracking',
+    text: 'If your tracker fails, runs out of battery, or is left at home for a day, how do you feel?',
+    options: [
+      { text: 'Indifferent — I barely notice',         score: 0 },
+      { text: 'Mildly inconvenienced',                 score: 1 },
+      { text: 'Anxious or unsettled',                  score: 2 },
+      { text: 'In genuine distress — I cannot function normally', score: 3 }
+    ]
+  },
+  {
+    domain: 'tracker',
+    section: 'Self-Tracking',
+    text: 'When deciding whether you are hungry, what do you trust more — your body or your calorie-tracking app?',
+    options: [
+      { text: 'My body, always',                       score: 0 },
+      { text: 'Mostly my body, occasionally the app',  score: 1 },
+      { text: 'Mostly the app, occasionally my body',  score: 2 },
+      { text: 'Only the app — I no longer trust my body', score: 3 }
+    ]
+  },
+  {
+    domain: 'tracker',
+    section: 'Self-Tracking',
+    text: 'Have you ever felt your sleep was "bad" because of a low score, even when you woke up feeling rested?',
+    options: [
+      { text: 'Never — I trust how I feel',            score: 0 },
+      { text: 'Rarely',                                score: 1 },
+      { text: 'Sometimes',                             score: 2 },
+      { text: 'Often — the score determines how I feel about my sleep', score: 3 }
+    ]
+  },
+  {
+    domain: 'tracker',
+    section: 'Self-Tracking',
+    text: 'Do you feel guilty when you do not hit your daily activity or step goal?',
+    options: [
+      { text: 'No — I do not track activity goals',    score: 0 },
+      { text: 'Rarely — only on poor days',            score: 1 },
+      { text: 'Often, even when I am genuinely tired', score: 2 },
+      { text: 'Always — missing the goal weighs on me' , score: 3 }
+    ]
+  },
+  {
+    domain: 'tracker',
+    section: 'Self-Tracking',
+    text: 'Do you adjust how much you eat based on what your calorie app shows, even when you are still hungry?',
+    options: [
+      { text: 'Never',                                 score: 0 },
+      { text: 'Occasionally',                          score: 1 },
+      { text: 'Often',                                 score: 2 },
+      { text: 'Always — the app overrides my hunger',  score: 3 }
+    ]
+  },
+  {
+    domain: 'tracker',
+    section: 'Self-Tracking',
+    text: 'Do you find yourself walking, pacing, or moving primarily so that your tracker registers the activity?',
+    options: [
+      { text: 'Never — I move for my own reasons',     score: 0 },
+      { text: 'Rarely',                                score: 1 },
+      { text: 'Sometimes',                             score: 2 },
+      { text: 'Often — much of my movement is driven by the device', score: 3 }
+    ]
+  },
+
+  /* ---------------- DOMAIN 2: AI COMPANIONS (6 questions) -------- */
+  {
+    domain: 'ai',
+    section: 'AI Companions',
+    text: 'When you feel emotionally distressed, who do you turn to first?',
+    options: [
+      { text: 'A friend, family member, or therapist', score: 0 },
+      { text: 'Sometimes humans, sometimes a chatbot', score: 1 },
+      { text: 'Mostly a chatbot',                      score: 2 },
+      { text: 'Only a chatbot — I no longer share with humans', score: 3 }
+    ]
+  },
+  {
+    domain: 'ai',
+    section: 'AI Companions',
+    text: 'Roughly how many hours per week do you spend interacting with an AI companion or chatbot for emotional reasons?',
+    options: [
+      { text: 'Less than one hour',                    score: 0 },
+      { text: 'Between one and three hours',           score: 1 },
+      { text: 'Between four and ten hours',            score: 2 },
+      { text: 'More than ten hours',                   score: 3 }
+    ]
+  },
+  {
+    domain: 'ai',
+    section: 'AI Companions',
+    text: 'Have you confided things in an AI that you would not tell a close friend or family member?',
+    options: [
+      { text: 'Never',                                 score: 0 },
+      { text: 'Once or twice',                         score: 1 },
+      { text: 'Several times',                         score: 2 },
+      { text: 'Often — the AI knows things no one else does', score: 3 }
+    ]
+  },
+  {
+    domain: 'ai',
+    section: 'AI Companions',
+    text: 'Do you feel that an AI "understands" you better than the people in your life?',
+    options: [
+      { text: 'No — humans understand me better',      score: 0 },
+      { text: 'They understand me equally well',       score: 1 },
+      { text: 'The AI understands me somewhat better', score: 2 },
+      { text: 'The AI understands me far better than anyone else', score: 3 }
+    ]
+  },
+  {
+    domain: 'ai',
+    section: 'AI Companions',
+    text: 'When you face a difficult conversation with someone, do you rehearse it with an AI first?',
+    options: [
+      { text: 'Never',                                 score: 0 },
+      { text: 'Rarely — only for the most important talks', score: 1 },
+      { text: 'Often',                                 score: 2 },
+      { text: 'Always — I cannot have hard talks without it', score: 3 }
+    ]
+  },
+  {
+    domain: 'ai',
+    section: 'AI Companions',
+    text: 'How does it feel when an AI disagrees with you, compared with when a human disagrees?',
+    options: [
+      { text: 'AI rarely disagrees, but I value real disagreement', score: 0 },
+      { text: 'I prefer human disagreement, but accept both', score: 1 },
+      { text: 'I find AI disagreement more uncomfortable than I should', score: 2 },
+      { text: 'I avoid AI that disagrees with me, and prefer ones that agree', score: 3 }
+    ]
+  },
+
+  /* ---------------- DOMAIN 3: COGNITIVE OFFLOADING (7 questions) - */
+  {
+    domain: 'cognitive',
+    section: 'Cognitive Offloading',
+    text: 'Without checking your phone, how many phone numbers of close family members can you recall from memory?',
+    options: [
+      { text: 'Five or more',                          score: 0 },
+      { text: 'Three or four',                         score: 1 },
+      { text: 'One or two',                            score: 2 },
+      { text: 'None',                                  score: 3 }
+    ]
+  },
+  {
+    domain: 'cognitive',
+    section: 'Cognitive Offloading',
+    text: 'When walking or driving a route you have taken many times, do you still use a navigation app?',
+    options: [
+      { text: 'Never — I rely on memory',              score: 0 },
+      { text: 'Rarely — only for traffic',             score: 1 },
+      { text: 'Often',                                 score: 2 },
+      { text: 'Always — I no longer trust my own sense of direction', score: 3 }
+    ]
+  },
+  {
+    domain: 'cognitive',
+    section: 'Cognitive Offloading',
+    text: 'When you need to remember a new idea, what is your first instinct?',
+    options: [
+      { text: 'Think it through and commit it to memory', score: 0 },
+      { text: 'Write it down by hand',                 score: 1 },
+      { text: 'Type a note on my phone',               score: 2 },
+      { text: 'Ask an AI to remember it for me',       score: 3 }
+    ]
+  },
+  {
+    domain: 'cognitive',
+    section: 'Cognitive Offloading',
+    text: 'Can you do simple mental arithmetic — like adding 47 and 28 — without reaching for a calculator?',
+    options: [
+      { text: 'Easily — I do mental maths every day',  score: 0 },
+      { text: 'Yes, but it takes a moment',            score: 1 },
+      { text: 'Reluctantly — I would rather use a calculator', score: 2 },
+      { text: 'No — I always reach for a calculator',  score: 3 }
+    ]
+  },
+  {
+    domain: 'cognitive',
+    section: 'Cognitive Offloading',
+    text: 'When taking notes in a class, meeting, or lecture, what do you prefer?',
+    options: [
+      { text: 'Handwriting on paper',                  score: 0 },
+      { text: 'Mostly handwriting, sometimes typing',  score: 1 },
+      { text: 'Mostly typing, sometimes handwriting',  score: 2 },
+      { text: 'Only typing — I no longer write by hand', score: 3 }
+    ]
+  },
+  {
+    domain: 'cognitive',
+    section: 'Cognitive Offloading',
+    text: 'Can you read a long article (about twenty minutes) without checking your phone partway through?',
+    options: [
+      { text: 'Yes — I can sustain deep focus easily', score: 0 },
+      { text: 'Usually, with some effort',             score: 1 },
+      { text: 'Rarely — I check my phone several times', score: 2 },
+      { text: 'No — I cannot focus that long anymore', score: 3 }
+    ]
+  },
+  {
+    domain: 'cognitive',
+    section: 'Cognitive Offloading',
+    text: 'Without searching, can you recall something significant you read or learned more than a month ago?',
+    options: [
+      { text: 'Yes — I can retrieve and discuss it in detail', score: 0 },
+      { text: 'Yes, but the details have faded',       score: 1 },
+      { text: 'Only vaguely — I would need to search', score: 2 },
+      { text: 'No — if I cannot search for it, it is gone', score: 3 }
+    ]
+  }
+];
+
+/* ---------------- State ---------------- */
+let currentIndex = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+
+/* ---------------- Screen control ---------------- */
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function startAssessment() {
+  currentIndex = 0;
+  answers.fill(null);
+  showScreen('screen-question');
+  renderQuestion();
+}
+
+function restartAssessment() {
+  startAssessment();
+}
+
+/* ---------------- Question rendering ---------------- */
+function renderQuestion() {
+  const q = QUESTIONS[currentIndex];
+
+  document.getElementById('section-label').textContent = q.section;
+  document.getElementById('q-current').textContent = currentIndex + 1;
+  document.getElementById('question-text').textContent = q.text;
+
+  const progress = ((currentIndex + 1) / QUESTIONS.length) * 100;
+  document.getElementById('progress-fill').style.width = progress + '%';
+
+  const container = document.getElementById('options-container');
+  container.innerHTML = '';
+
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option';
+    if (answers[currentIndex] === i) btn.classList.add('selected');
+
+    const keys = ['A', 'B', 'C', 'D'];
+    btn.innerHTML = `
+      <span class="key">${keys[i]}</span>
+      <span class="text">${opt.text}</span>
+    `;
+    btn.onclick = () => selectOption(i);
+    container.appendChild(btn);
+  });
+
+  document.getElementById('back-btn').disabled = (currentIndex === 0);
+}
+
+function selectOption(optionIndex) {
+  answers[currentIndex] = optionIndex;
+
+  // Visual feedback
+  document.querySelectorAll('.option').forEach((el, i) => {
+    el.classList.toggle('selected', i === optionIndex);
+  });
+
+  // Slight pause for the highlight to be visible, then advance
+  setTimeout(() => {
+    if (currentIndex < QUESTIONS.length - 1) {
+      currentIndex++;
+      renderQuestion();
+    } else {
+      showResults();
+    }
+  }, 280);
+}
+
+function goBack() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    renderQuestion();
+  }
+}
+
+/* ---------------- Keyboard support ---------------- */
+document.addEventListener('keydown', (e) => {
+  if (!document.getElementById('screen-question').classList.contains('active')) return;
+
+  const key = e.key.toUpperCase();
+  if (['A','B','C','D'].includes(key)) {
+    selectOption(['A','B','C','D'].indexOf(key));
+  } else if (['1','2','3','4'].includes(key)) {
+    selectOption(parseInt(key) - 1);
+  } else if (e.key === 'ArrowLeft') {
+    goBack();
+  }
+});
+
+/* ---------------- Scoring ---------------- */
+function classify(percent) {
+  if (percent < 25)  return { band: 'Low',       cls: 'low' };
+  if (percent < 50)  return { band: 'Moderate',  cls: 'moderate' };
+  if (percent < 75)  return { band: 'High',      cls: 'high' };
+  return { band: 'Very High',  cls: 'veryhigh' };
+}
+
+const INTERPRETATIONS = {
+  low: {
+    head: "A healthy relationship.",
+    body: "Your responses suggest a balanced relationship with the technologies in your life. You appear to use devices as tools that augment your existing capabilities, rather than as substitutes for them. The research literature would describe your pattern as one of <em>enhancement</em> rather than <em>replacement</em> — the favourable outcome described in Self-Determination Theory."
+  },
+  moderate: {
+    head: "Borderline patterns are appearing.",
+    body: "Some signs of dependence are visible in your responses. You are not in clinical territory, but the literature suggests this is the stage at which preventive habits matter most. Small adjustments now — reducing checking frequency, exercising abilities you have begun to outsource — can prevent the pattern from deepening over time."
+  },
+  high: {
+    head: "Significant dependence detected.",
+    body: "Your wellbeing, decisions, or cognitive functions appear to be substantially mediated by algorithmic systems. The research draws a clear line at this level: short-term convenience is producing long-term loss of skill or autonomy. The recommendations below offer a structured path back toward the kind of intrinsic regulation that supports lasting psychological wellbeing."
+  },
+  veryhigh: {
+    head: "Pathological pattern.",
+    body: "Your responses indicate a high-risk profile across one or more domains. The empirical literature reviewed in the source paper documents serious psychological consequences — orthosomnia, eating-disorder worsening, parasocial dependence, and significant cognitive atrophy — at levels comparable to those reflected here. We strongly suggest considering professional support and beginning with a measured digital detox."
+  }
+};
+
+const RECOMMENDATIONS = {
+  low: [
+    "Continue the habits that are working — particularly any moments where you make decisions without consulting a device.",
+    "Consider sharing your approach with someone who is struggling: low-dependence individuals are valuable role models.",
+    "Stay alert. Patterns drift. The questions in this assessment are worth revisiting every six months."
+  ],
+  moderate: [
+    "Identify the single domain (tracker, AI, or cognitive) where you scored highest and focus your attention there first.",
+    "Try one full day per week without the device or app you rely on most. Note what changes — both the discomfort and the surprises.",
+    "Re-introduce one analogue practice: handwritten notes, a paper map, a phone call instead of a chatbot conversation.",
+    "Notice the difference between using a tool and needing one. The first is healthy. The second is the warning sign."
+  ],
+  high: [
+    "Begin with a 24-hour test: can you function for one full day without the device or application you rely on most? If not, the dependence is established.",
+    "Reduce checking frequency by half for the next two weeks. Use a timer rather than relying on willpower.",
+    "Re-introduce abilities you have begun to outsource: navigate without GPS once a week, memorise three new phone numbers, take notes by hand.",
+    "Diversify emotional support. If you primarily confide in an AI, reach out — even briefly — to a human friend, family member, or counsellor this week.",
+    "Consider whether some of the apps in your life can be removed entirely, rather than merely used less."
+  ],
+  veryhigh: [
+    "Speak to a qualified mental-health professional. The patterns reflected here are associated, in the research literature, with significant psychological harm.",
+    "Begin with a structured digital detox of at least 48 hours, ideally with the support of someone you trust.",
+    "Audit your applications honestly. Remove (do not merely uninstall) any application that the assessment has identified as central to your dependence.",
+    "Replace algorithmic relationships with human ones, deliberately and gradually. One conversation per day with a real person is a meaningful start.",
+    "Be patient with the recovery period. Cognitive abilities atrophy with disuse but, in adults, can also recover with practice. Treat this as a long-term project, not a short-term fix."
+  ]
+};
+
+const DOMAIN_LABELS = {
+  tracker:   'Self-Tracking Behaviour',
+  ai:        'AI-Companion Reliance',
+  cognitive: 'Cognitive Offloading'
+};
+
+/* ---------------- Results ---------------- */
+function showResults() {
+  // Calculate per-domain and total
+  const totals = { tracker: 0, ai: 0, cognitive: 0 };
+  const maxes  = { tracker: 0, ai: 0, cognitive: 0 };
+
+  QUESTIONS.forEach((q, i) => {
+    const score = q.options[answers[i]].score;
+    totals[q.domain] += score;
+    maxes[q.domain]  += 3; // each question has 0-3 range
+  });
+
+  const totalScore = totals.tracker + totals.ai + totals.cognitive;
+  const totalMax   = maxes.tracker + maxes.ai + maxes.cognitive;
+  const totalPct   = (totalScore / totalMax) * 100;
+  const overall    = classify(totalPct);
+
+  // Render score block
+  document.getElementById('total-score').textContent = totalScore;
+
+  const pill = document.getElementById('score-band-pill');
+  pill.textContent = overall.band + ' Dependence';
+  pill.className = 'score-band band-' + overall.cls;
+
+  // Render domain breakdown
+  const breakdown = document.getElementById('domain-breakdown');
+  breakdown.innerHTML = '';
+
+  Object.keys(DOMAIN_LABELS).forEach(key => {
+    const score = totals[key];
+    const max = maxes[key];
+    const pct = (score / max) * 100;
+    const cls = classify(pct);
+
+    const row = document.createElement('div');
+    row.className = 'domain-row';
+    row.innerHTML = `
+      <div class="domain-meta">
+        <div class="domain-name">${DOMAIN_LABELS[key]} <span class="level">${cls.band}</span></div>
+        <div class="domain-score">${score} / ${max}</div>
+      </div>
+      <div class="domain-bar">
+        <div class="domain-fill fill-${cls.cls}" data-target="${pct}%"></div>
+      </div>
+    `;
+    breakdown.appendChild(row);
+  });
+
+  // Animate fills
+  setTimeout(() => {
+    document.querySelectorAll('.domain-fill').forEach(el => {
+      el.style.width = el.getAttribute('data-target');
+    });
+  }, 100);
+
+  // Render interpretation
+  const interp = INTERPRETATIONS[overall.cls];
+  document.getElementById('interpretation').innerHTML = `
+    <p class="first-letter"><strong style="font-family: var(--serif); font-style: italic; color: var(--ink); font-weight: 500;">${interp.head}</strong> ${interp.body}</p>
+  `;
+
+  // Render recommendations
+  const recoList = document.getElementById('recommendations');
+  recoList.innerHTML = '';
+  RECOMMENDATIONS[overall.cls].forEach((reco, i) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="num">${String(i + 1).padStart(2, '0')}</span><span>${reco}</span>`;
+    recoList.appendChild(li);
+  });
+
+  showScreen('screen-results');
+}
+
+</script>
+
+</body>
+</html>
